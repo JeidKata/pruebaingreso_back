@@ -1,0 +1,12 @@
+### Crear reserva
+POST http://127.0.0.1:8000/api/token/
+Content-Type: application/json
+ 
+{
+  "username": "tu_usuario",
+  "password": "tu_contraseña"
+}
+
+### Listar municipios por departamento
+GET http://127.0.0.1:8000/api/municipios-por-departamento/PUTUMAYO/
+Authorization: Bearer tu_token_aqui
