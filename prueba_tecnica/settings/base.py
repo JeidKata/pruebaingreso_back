@@ -14,6 +14,9 @@ from pathlib import Path
 import os
 import environ
 
+# Set GDAL library path
+os.environ['GDAL_LIBRARY_PATH'] = r'C:\Program Files\GDAL311\bin\gdal.dll'
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -30,7 +33,7 @@ env.read_env(BASE_DIR / '.env')
 SECRET_KEY = env('DJANGO_SECRET_KEY')
 
 # environment
-DEBUG = env('DJANGO_DEBUG')
+DEBUG = env('DJANGO_DEBUG', default=False)
 
 ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=[])
 
@@ -47,6 +50,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_gis',
     'rest_framework_simplejwt',
+    'prueba_tecnica.apps.datos.municipios',
+    'prueba_tecnica.apps.datos.oficinas',
 ]
 
 MIDDLEWARE = [
