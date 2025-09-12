@@ -1,3 +1,7 @@
+'''
+    App configuration for the oficinas app.
+'''
+
 from django.apps import AppConfig
 
 

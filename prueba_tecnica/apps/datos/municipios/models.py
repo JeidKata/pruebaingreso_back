@@ -1,6 +1,9 @@
+'''
+    Models for the Municipio entity.
+'''
+
 from django.contrib.gis.db import models
 
-# Create your models here.
 class Municipio(models.Model):
     gid = models.AutoField(primary_key=True)
     cod_dane = models.CharField(max_length=255)
@@ -11,5 +14,5 @@ class Municipio(models.Model):
     geom = models.MultiPolygonField(srid=4326)  # O PolygonField si tu shapefile es de polígonos simples
 
     class Meta:
-        managed = False  # Django no gestionará la tabla
+        managed = False 
         db_table = 'municipios'

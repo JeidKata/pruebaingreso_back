@@ -1,3 +1,7 @@
+'''
+    App configuration for the municipios app.
+'''
+
 from django.apps import AppConfig
 
 
