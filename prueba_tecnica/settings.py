@@ -51,6 +51,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework_gis',
     'rest_framework_simplejwt',
+    'prueba_tecnica.apps.datos.municipios',
+    'prueba_tecnica.apps.datos.oficinas',
 ]
 
 MIDDLEWARE = [
