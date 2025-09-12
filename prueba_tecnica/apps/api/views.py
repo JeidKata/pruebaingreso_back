@@ -3,7 +3,7 @@ from rest_framework.response import Response
 from rest_framework import status, permissions
 from prueba_tecnica.apps.datos.municipios.models import Municipio
 from prueba_tecnica.apps.datos.oficinas.models import Oficina
-from serializers import MunicipioSerializer, MunicipioGeoSerializer
+from .serializers.municipio_serialize import MunicipioSerializer, MunicipioGeoSerializer
 
 class MunicipiosPorDepartamentoView(APIView):
     permission_classes = [permissions.IsAuthenticated]
